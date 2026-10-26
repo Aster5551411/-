@@ -1,0 +1,20 @@
+{
+  "name": "毛概研习 · 章节刷题",
+  "short_name": "毛概研习",
+  "description": "《毛概》章节刷题、即时解析、错题本与练习记录。",
+  "lang": "zh-CN",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#f2eee4",
+  "theme_color": "#a9322a",
+  "icons": [
+    {
+      "src": "./icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

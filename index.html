@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="zh-CN" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta
+      name="description"
+      content="《毛概》章节刷题、即时解析、错题本与练习记录。"
+    />
+    <meta name="theme-color" content="#b1362e" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="毛概研习" />
+    <title>毛概研习 · 章节刷题</title>
+    <link rel="manifest" href="./manifest.webmanifest" />
+    <link rel="icon" href="./icon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="./styles.css" />
+    <script>
+      (() => {
+        try {
+          const saved = localStorage.getItem("maogai-theme");
+          const dark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+          document.documentElement.dataset.theme =
+            saved === "dark" || saved === "light" ? saved : dark ? "dark" : "light";
+        } catch {
+          document.documentElement.dataset.theme = "light";
+        }
+      })();
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">跳到主要内容</a>
+
+    <svg class="svg-sprite" aria-hidden="true">
+      <symbol id="i-home" viewBox="0 0 24 24">
+        <path d="m3 10 9-7 9 7v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2Z" />
+        <path d="M9 21v-8h6v8" />
+      </symbol>
+      <symbol id="i-book" viewBox="0 0 24 24">
+        <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
+        <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2Z" />
+      </symbol>
+      <symbol id="i-note" viewBox="0 0 24 24">
+        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z" />
+        <path d="M14 2v6h6M8 13h8M8 17h6" />
+      </symbol>
+      <symbol id="i-clock" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="9" />
+        <path d="M12 7v5l3 2" />
+      </symbol>
+      <symbol id="i-list" viewBox="0 0 24 24">
+        <path d="M8 6h13M8 12h13M8 18h13" />
+        <path d="M3 6h.01M3 12h.01M3 18h.01" />
+      </symbol>
+      <symbol id="i-shuffle" viewBox="0 0 24 24">
+        <path d="m18 4 3 3-3 3M2 7h4.5c5.5 0 5.5 10 11 10H21" />
+        <path d="m18 14 3 3-3 3M2 17h4.5c1.5 0 2.7-.8 3.8-2" />
+        <path d="M13.7 7c1.1-.7 2.3-1 3.8-1H21" />
+      </symbol>
+      <symbol id="i-arrow-left" viewBox="0 0 24 24">
+        <path d="m15 18-6-6 6-6M9 12h12" />
+      </symbol>
+      <symbol id="i-arrow-right" viewBox="0 0 24 24">
+        <path d="m9 18 6-6-6-6M3 12h12" />
+      </symbol>
+      <symbol id="i-check" viewBox="0 0 24 24">
+        <path d="m5 12 4 4L19 6" />
+      </symbol>
+      <symbol id="i-x" viewBox="0 0 24 24">
+        <path d="m6 6 12 12M18 6 6 18" />
+      </symbol>
+      <symbol id="i-target" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="9" />
+        <circle cx="12" cy="12" r="5" />
+        <circle cx="12" cy="12" r="1" />
+      </symbol>
+      <symbol id="i-chart" viewBox="0 0 24 24">
+        <path d="M3 3v18h18M7 16l4-5 4 3 5-7" />
+      </symbol>
+      <symbol id="i-sun" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="4" />
+        <path d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.42-1.42M17.66 6.34l1.41-1.41" />
+      </symbol>
+      <symbol id="i-moon" viewBox="0 0 24 24">
+        <path d="M20.5 14.2A8.5 8.5 0 0 1 9.8 3.5 8.5 8.5 0 1 0 20.5 14.2Z" />
+      </symbol>
+      <symbol id="i-award" viewBox="0 0 24 24">
+        <circle cx="12" cy="8" r="6" />
+        <path d="M8.2 13 7 22l5-3 5 3-1.2-9" />
+      </symbol>
+      <symbol id="i-refresh" viewBox="0 0 24 24">
+        <path d="M20 11a8 8 0 1 0-2.3 6.2M20 4v7h-7" />
+      </symbol>
+      <symbol id="i-download" viewBox="0 0 24 24">
+        <path d="M12 3v12m0 0 4-4m-4 4-4-4M5 21h14" />
+      </symbol>
+      <symbol id="i-upload" viewBox="0 0 24 24">
+        <path d="M12 16V4m0 0 4 4m-4-4L8 8M5 20h14" />
+      </symbol>
+      <symbol id="i-chevron-down" viewBox="0 0 24 24">
+        <path d="m6 9 6 6 6-6" />
+      </symbol>
+      <symbol id="i-play" viewBox="0 0 24 24">
+        <path d="m8 5 11 7-11 7Z" />
+      </symbol>
+      <symbol id="i-trash" viewBox="0 0 24 24">
+        <path d="M4 7h16M9 7V4h6v3M6 7l1 14h10l1-14M10 11v6M14 11v6" />
+      </symbol>
+      <symbol id="i-spark" viewBox="0 0 24 24">
+        <path d="m12 3 1.5 5.5L19 10l-5.5 1.5L12 17l-1.5-5.5L5 10l5.5-1.5Z" />
+        <path d="m19 16 .7 2.3L22 19l-2.3.7L19 22l-.7-2.3L16 19l2.3-.7Z" />
+      </symbol>
+    </svg>
+
+    <div class="app-shell">
+      <header class="topbar">
+        <a class="brand" href="#/" data-action="route-home" aria-label="返回首页">
+          <span class="brand-seal">研</span>
+          <span class="brand-copy">
+            <strong>毛概研习</strong>
+            <small>THEORY PRACTICE</small>
+          </span>
+        </a>
+
+        <nav class="top-nav" aria-label="主导航">
+          <button type="button" class="top-nav-link" data-action="route-home" data-nav="home">
+            首页
+          </button>
+          <button type="button" class="top-nav-link" data-action="route-wrong" data-nav="wrong">
+            错题本
+          </button>
+          <button type="button" class="top-nav-link" data-action="route-history" data-nav="history">
+            练习记录
+          </button>
+        </nav>
+
+        <div class="top-actions">
+          <div id="session-shortcut" class="session-shortcut"></div>
+          <button
+            type="button"
+            class="icon-button"
+            id="theme-toggle"
+            data-action="toggle-theme"
+            aria-label="切换深色模式"
+          >
+            <svg class="icon"><use href="#i-moon"></use></svg>
+          </button>
+        </div>
+      </header>
+
+      <main id="main" tabindex="-1"></main>
+
+      <footer class="site-footer">
+        <span>毛概研习 · 离线题库</span>
+        <span>练习记录仅保存在当前浏览器</span>
+      </footer>
+    </div>
+
+    <nav class="bottom-nav" aria-label="移动端主导航">
+      <button type="button" data-action="route-home" data-nav="home">
+        <svg class="icon"><use href="#i-home"></use></svg>
+        <span>首页</span>
+      </button>
+      <button type="button" data-action="route-wrong" data-nav="wrong">
+        <svg class="icon"><use href="#i-note"></use></svg>
+        <span>错题本</span>
+      </button>
+      <button type="button" data-action="route-history" data-nav="history">
+        <svg class="icon"><use href="#i-clock"></use></svg>
+        <span>记录</span>
+      </button>
+    </nav>
+
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+    <input id="import-file" type="file" accept="application/json,.json" hidden />
+
+    <script src="./questions.js"></script>
+    <script src="./app.js"></script>
+  </body>
+</html>
